@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-capability",
+  "description": "Only the native file save dialog is enabled for explicit diagnostic report exports.",
+  "windows": ["main"],
+  "permissions": ["dialog:allow-save"]
+}

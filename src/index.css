@@ -1,0 +1,7 @@
+:root { font-family: 'Segoe UI Variable', 'Segoe UI', sans-serif; color: #e4e9e5; background: #151918; font-synthesis: none; text-rendering: optimizeLegibility; font-optical-sizing: auto; font-weight: 400; --bg: #151918; --panel: #1a1f1d; --panel-raised: #1d2321; --sidebar: #111513; --line: #2a322e; --text: #e4e9e5; --muted: #8f9a93; --soft: #bac4bd; --green: #9ab99f; --green-dim: #24372c; --amber: #d7b77a; --danger: #d69086; --mono: 'Cascadia Code', 'Consolas', monospace; }
+:root[data-theme='light'] { color-scheme: light; --bg: #eff2ef; --panel: #f8faf8; --panel-raised: #fff; --sidebar: #e7ece8; --line: #d5ddd7; --text: #242b26; --muted: #69756d; --soft: #4b574f; --green: #416e4c; --green-dim: #dfeae1; --amber: #866321; --danger: #a8483c; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 740px; min-height: 100vh; }
+button { font: inherit; }
+button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+::selection { background: #49654f; color: white; }

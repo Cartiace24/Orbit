@@ -1,0 +1,29 @@
+[package]
+name = "orbit"
+version = "0.1.0"
+description = "A local-first Windows PC troubleshooting workbench"
+authors = ["ORBIT"]
+edition = "2021"
+
+[lib]
+name = "orbit_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+tauri = { version = "2", features = [] }
+sysinfo = "0.37"
+winreg = "0.55"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+rusqlite = { version = "0.40.2", features = ["bundled"] }
+tokio = { version = "1", features = ["net", "sync", "time"] }
+ipconfig = "0.3.4"
+serde_json = "1"
+tauri-plugin-dialog = "2"
+reqwest = { version = "0.12", default-features = false, features = ["json"] }
+
+[target."cfg(windows)".dependencies]
+windows-sys = { version = "0.61.2", features = ["Win32_NetworkManagement_IpHelper", "Win32_Foundation", "Win32_Networking_WinSock"] }
